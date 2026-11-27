@@ -2,32 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHRONOS ALPHA FESTIVAL - Entradas</title>
+    <title>Atención al Cliente / Ticketing - Cronos Staff Portal</title>
 </head>
 <body>
-    <header id="inicio">
-        <h1>Atención al Cliente / Venta de entradas - [Nombre del alumno 5]</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./escenarios.html">Escenarios</a></li>
-                <li><a href="./personal.html">Personal</a></li>
-                <li><a href="./seguridad.html">Seguridad</a></li>
-                <li><a href="./inventario.html">Inventario</a></li>
-                <li><a href="./entradas.html">Entradas</a></li>
-            </ul>
-        </nav>
 
+    <header>
+        <h1>Atención al Cliente / Ticketing - Raúl Martín</h1>
     </header>
 
-    <main>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./escenarios.html">Escenarios</a></li>
+            <li><a href="./personal.html">Personal</a></li>
+            <li><a href="./seguridad.html">Seguridad</a></li>
+            <li><a href="./inventario.html">Inventario</a></li>
+            <li><a href="./entradas.html">Entradas</a></li>
+        </ul>
+    </nav>
 
+    <main>
         <section>
             <h2>Resumen de ventas por tipo</h2>
-            <p>Listado de las últimas entradas vendidas, canales de venta, métodos de pago e importe total.</p>
+            <p>Listado detallado de las últimas entradas vendidas, canales de venta, métodos de pago e importe total.</p>
 
-            <table>
+            <table border="1">
+                <caption>Últimas entradas vendidas</caption>
                 <thead>
                     <tr>
                         <th colspan="6">Datos económicos</th>
@@ -136,58 +136,62 @@
 
         <section>
             <h2>Reclamación de usuario</h2>
-            <p>Formulario para registrar incidencias o reclamaciones de clientes sobre sus entradas.</p>
+            <p>Formulario para que los clientes puedan reportar incidencias o problemas con sus entradas.</p>
 
-            <form action="#" method="post">
+            <form action="nohay.html" method="post">
                 <fieldset>
                     <legend>Datos del cliente</legend>
 
                     <div>
-                        <label for="numero-pedido">Número de pedido (máximo 10 dígitos):</label>
-                        <input type="text" id="numero-pedido" name="numero_pedido" pattern="[0-9]{1,10}" maxlength="10" required>
+                        <label for="numero_pedido">Número de pedido:</label>
+                        <input type="number" id="numero_pedido" name="numero_pedido" min="0" max="9999999999" required>
                     </div>
-
+                    <br>
                     <div>
-                        <label for="fecha-compra">Fecha de la compra:</label>
-                        <input type="date" id="fecha-compra" name="fecha_compra" required>
+                        <label for="fecha_compra">Fecha de la compra:</label>
+                        <input type="date" id="fecha_compra" name="fecha_compra">
                     </div>
-
+                    <br>
                     <div>
-                        <label for="correo-respuesta">Correo de respuesta:</label>
-                        <input type="email" id="correo-respuesta" name="correo_respuesta" placeholder="nombreCliente@correo.com" required>
+                        <label for="correo_respuesta">Correo de respuesta:</label>
+                        <input type="email" id="correo_respuesta" name="correo_respuesta" placeholder="alberto.desantos@fje.edu">
                     </div>
                 </fieldset>
+
+                <br>
 
                 <fieldset>
                     <legend>Detalles de la reclamación</legend>
 
                     <div>
-                        <label for="motivo-reclamacion">Motivo de la reclamación:</label>
-                        <select id="motivo-reclamacion" name="motivo_reclamacion" required>
-                            <option value="">-- Selecciona un motivo --</option>
-                            <option value="entrada-no-recibida">Entrada no recibida</option>
-                            <option value="cobro-duplicado">Cobro duplicado</option>
-                            <option value="error-datos">Error en los datos de la entrada</option>
+                        <label for="motivo">Motivo de la reclamación:</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Selecciona un motivo</option>
+                            <option value="no_recibida">Entrada no recibida</option>
+                            <option value="cobro_duplicado">Cobro duplicado</option>
+                            <option value="error_datos">Error en los datos de la entrada</option>
                             <option value="otros">Otros</option>
                         </select>
                     </div>
-
+                    <br>
                     <div>
-                        <label for="descripcion-reclamacion">Descripción del problema:</label>
-                        <textarea id="descripcion-reclamacion" name="descripcion_reclamacion" rows="5" cols="50" required></textarea>
+                        <label for="descripcion">Descripción del problema:</label><br>
+                        <textarea id="descripcion" name="descripcion" required></textarea>
                     </div>
                 </fieldset>
 
+                <br>
+
                 <div>
                     <button type="submit">Enviar reclamación</button>
+                    <button type="reset">Borrar formulario</button>
                 </div>
             </form>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2026 CHRONOS ALPHA FESTIVAL. Todos los derechos reservados.</p>
+        <p>2026 CHRONOS ALPHA FESTIVAL. Todos los derechos reservados.</p>
     </footer>
 
 </body>

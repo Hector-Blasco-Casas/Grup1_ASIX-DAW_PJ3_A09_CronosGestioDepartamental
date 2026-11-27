@@ -8,7 +8,7 @@
 <body>
 
     <header id="inicio">
-        <h1>Departamento de RR. HH. (Personal) - [Nombre del alumno 2]</h1>
+        <h1>Departamento de RR. HH. (Personal) - Mari Dandjinou</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -23,12 +23,9 @@
     </header>
 
     <main>
-
         <section>
             <h2>Cuadrante de turnos semanal</h2>
-            <p>Distribución semanal de turnos (mañana / tarde), bajas médicas y vacaciones del personal.</p>
-
-            <table>
+            <table border="1">
                 <thead>
                     <tr>
                         <th>Trabajador <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
@@ -43,79 +40,79 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Óscar Flores</td>
+                        <td>Óscar Conde</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
+                        <td>Tarde</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Noemi Garcia</td>
+                        <td>Tarde</td>
+                        <td>Tarde</td>
+                        <td>Tarde</td>
+                        <td>Tarde</td>
+                        <td>Tarde</td>
                         <td>-</td>
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>[Trabajador 2]</td>
-                        <td>Tarde</td>
-                        <td>Tarde</td>
-                        <td>Tarde</td>
-                        <td>Tarde</td>
-                        <td>Tarde</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>[Trabajador 3 - Baja]</td>
-                        <td colspan="3">Baja médica</td>
+                        <td>Paola Soto</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
                         <td>-</td>
                         <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>[Trabajador 4 - Baja]</td>
-                        <td>Tarde</td>
-                        <td>Tarde</td>
-                        <td colspan="3">Baja médica</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>[Trabajador 5 - Baja]</td>
-                        <td>Mañana</td>
-                        <td>Mañana</td>
-                        <td>Mañana</td>
-                        <td>Mañana</td>
                         <td colspan="3">Baja médica</td>
                     </tr>
                     <tr>
-                        <td>[Trabajador 6 - Vacaciones]</td>
+                        <td>Ulises Marín</td>
+                        <td colspan="3">Baja médica</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Juan Fuentes</td>
+                        <td>Mañana</td>
+                        <td>Mañana</td>
+                        <td>Mañana</td>
+                        <td>Mañana</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Berto Sanchez</td>
                         <td colspan="7">NO DISPONIBLE</td>
                     </tr>
                     <tr>
-                        <td>[Trabajador 7 - Vacaciones]</td>
+                        <td>Isandro Salazar</td>
                         <td colspan="7">NO DISPONIBLE</td>
                     </tr>
                     <tr>
-                        <td>[Trabajador 8]</td>
+                        <td>Bartolomeo Luna</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
-                        <td>Mañana</td>
-                        <td>Mañana</td>
-                        <td>Mañana</td>
-                        <td>-</td>
+                        <td colspan="3">Baja médica</td>
+                        <td>Tarde</td>
                     </tr>
                     <tr>
-                        <td>[Trabajador 9]</td>
+                        <td>Adan Gil</td>
                         <td>-</td>
                         <td>Tarde</td>
                         <td>Tarde</td>
                         <td>Tarde</td>
                         <td>Tarde</td>
                         <td>Tarde</td>
-                        <td>Tarde</td>
+                        <td>-</td>
                     </tr>
                     <tr>
-                        <td>[Trabajador 10]</td>
+                        <td>Rosario Fuentes</td>
                         <td>Mañana</td>
                         <td>Mañana</td>
                         <td>-</td>
@@ -132,14 +129,13 @@
 
         <section>
             <h2>Alta de nuevo trabajador</h2>
-            <p>Formulario para dar de alta a un nuevo trabajador y asignarlo a su departamento.</p>
 
             <form action="#" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Datos del nuevo trabajador</legend>
 
                     <div>
-                        <label for="nombre-completo">Nombre completo (nombre y apellidos):</label>
+                        <label for="nombre-completo">Nombre completo :</label>
                         <input type="text" id="nombre-completo" name="nombre_completo" required>
                     </div>
 
@@ -161,10 +157,10 @@
                     <div>
                         <label for="departamento">Departamento asignado:</label>
                         <select id="departamento" name="departamento" required>
-                            <option value="">-- Selecciona un departamento --</option>
+                            <option value="">Selecciona un departamento</option>
                             <option value="grupo-tecnico">Grupo Técnico</option>
                             <option value="grupo-logistica">Grupo de Logística</option>
-                            <option value="dpto-administracion">Dpto. de Administración</option>
+                            <option value="dpto-administracion">Departamento de Administración</option>
                         </select>
                     </div>
 
