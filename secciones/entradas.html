@@ -7,7 +7,7 @@
 </head>
 <body>
     <header id="inicio">
-
+        <h1>Atención al Cliente / Venta de entradas - [Nombre del alumno 5]</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -24,10 +24,164 @@
     <main>
 
         <section>
+            <h2>Resumen de ventas por tipo</h2>
+            <p>Listado de las últimas entradas vendidas, canales de venta, métodos de pago e importe total.</p>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="6">Datos económicos</th>
+                    </tr>
+                    <tr>
+                        <th>ID de transacción <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Hora <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Canal de venta <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Tipo de entrada <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Método de pago <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Importe final <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A001</td>
+                        <td>16:05</td>
+                        <td>Web</td>
+                        <td>General</td>
+                        <td>Tarjeta</td>
+                        <td>50 €</td>
+                    </tr>
+                    <tr>
+                        <td>A002</td>
+                        <td>16:12</td>
+                        <td>App</td>
+                        <td>VIP</td>
+                        <td>PayPal</td>
+                        <td>120 €</td>
+                    </tr>
+                    <tr>
+                        <td>A003</td>
+                        <td>16:20</td>
+                        <td>Taquilla</td>
+                        <td>Early Bird</td>
+                        <td>Efectivo</td>
+                        <td>35 €</td>
+                    </tr>
+                    <tr>
+                        <td>A004</td>
+                        <td>16:28</td>
+                        <td>Web</td>
+                        <td>General</td>
+                        <td>Tarjeta</td>
+                        <td>50 €</td>
+                    </tr>
+                    <tr>
+                        <td>A005</td>
+                        <td>16:35</td>
+                        <td>App</td>
+                        <td>General</td>
+                        <td>PayPal</td>
+                        <td>50 €</td>
+                    </tr>
+                    <tr>
+                        <td>A006</td>
+                        <td>16:40</td>
+                        <td>Web</td>
+                        <td>VIP</td>
+                        <td>Tarjeta</td>
+                        <td>120 €</td>
+                    </tr>
+                    <tr>
+                        <td>A007</td>
+                        <td>16:48</td>
+                        <td>Taquilla</td>
+                        <td>General</td>
+                        <td>Efectivo</td>
+                        <td>50 €</td>
+                    </tr>
+                    <tr>
+                        <td>A008</td>
+                        <td>16:55</td>
+                        <td>App</td>
+                        <td>Early Bird</td>
+                        <td>Tarjeta</td>
+                        <td>35 €</td>
+                    </tr>
+                    <tr>
+                        <td>A009</td>
+                        <td>17:02</td>
+                        <td>Web</td>
+                        <td>VIP</td>
+                        <td>PayPal</td>
+                        <td>120 €</td>
+                    </tr>
+                    <tr>
+                        <td>A010</td>
+                        <td>17:10</td>
+                        <td>Taquilla</td>
+                        <td>General</td>
+                        <td>Tarjeta</td>
+                        <td>50 €</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Total:</td>
+                        <td>680 €</td>
+                    </tr>
+                </tfoot>
+            </table>
         </section>
-        <section>
 
+        <hr>
+
+        <section>
+            <h2>Reclamación de usuario</h2>
+            <p>Formulario para registrar incidencias o reclamaciones de clientes sobre sus entradas.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos del cliente</legend>
+
+                    <div>
+                        <label for="numero-pedido">Número de pedido (máximo 10 dígitos):</label>
+                        <input type="text" id="numero-pedido" name="numero_pedido" pattern="[0-9]{1,10}" maxlength="10" required>
+                    </div>
+
+                    <div>
+                        <label for="fecha-compra">Fecha de la compra:</label>
+                        <input type="date" id="fecha-compra" name="fecha_compra" required>
+                    </div>
+
+                    <div>
+                        <label for="correo-respuesta">Correo de respuesta:</label>
+                        <input type="email" id="correo-respuesta" name="correo_respuesta" placeholder="nombreCliente@correo.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles de la reclamación</legend>
+
+                    <div>
+                        <label for="motivo-reclamacion">Motivo de la reclamación:</label>
+                        <select id="motivo-reclamacion" name="motivo_reclamacion" required>
+                            <option value="">-- Selecciona un motivo --</option>
+                            <option value="entrada-no-recibida">Entrada no recibida</option>
+                            <option value="cobro-duplicado">Cobro duplicado</option>
+                            <option value="error-datos">Error en los datos de la entrada</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="descripcion-reclamacion">Descripción del problema:</label>
+                        <textarea id="descripcion-reclamacion" name="descripcion_reclamacion" rows="5" cols="50" required></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Enviar reclamación</button>
+                </div>
+            </form>
         </section>
 
     </main>

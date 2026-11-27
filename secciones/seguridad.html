@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHRONOS ALPHA FESTIVAL - Seguridad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header id="inicio">
-
+        <h1>Departamento de Seguridad - [Nombre del alumno 3]</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -24,10 +25,150 @@
     <main>
 
         <section>
+            <h2>Registro de accesos y zonas</h2>
+            <p>Control en tiempo real de los intentos de acceso a las zonas restringidas del festival.</p>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zona restringida <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Punto de acceso <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Hora de lectura <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Nombre del visitante <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Tipo de acreditación <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                        <th>Resultado de validación <button type="button" title="Ordenar ascendente">&#9650;</button><button type="button" title="Ordenar descendente">&#9660;</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">Zona VIP</td>
+                        <td>Puerta norte</td>
+                        <td>20:15</td>
+                        <td>[Visitante 1]</td>
+                        <td>VIP</td>
+                        <td><i class="fa-solid fa-circle-check"></i> Acceso autorizado</td>
+                    </tr>
+                    <tr>
+                        <td>Puerta norte</td>
+                        <td>20:30</td>
+                        <td>[Visitante 2]</td>
+                        <td>Prensa</td>
+                        <td><i class="fa-solid fa-circle-xmark"></i> Acceso denegado</td>
+                    </tr>
+                    <tr>
+                        <td>Ascensor 3</td>
+                        <td>20:45</td>
+                        <td>[Visitante 3]</td>
+                        <td>VIP</td>
+                        <td><i class="fa-solid fa-clock"></i> Caducado</td>
+                    </tr>
+                    <tr>
+                        <td>Puerta norte</td>
+                        <td>21:00</td>
+                        <td>[Visitante 4]</td>
+                        <td>Artista</td>
+                        <td><i class="fa-solid fa-circle-check"></i> Acceso autorizado</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Backstage</td>
+                        <td>Escaleras A</td>
+                        <td>21:10</td>
+                        <td>[Visitante 5]</td>
+                        <td>Staff</td>
+                        <td><i class="fa-solid fa-circle-check"></i> Acceso autorizado</td>
+                    </tr>
+                    <tr>
+                        <td>Escaleras A</td>
+                        <td>21:20</td>
+                        <td>[Visitante 6]</td>
+                        <td>VIP</td>
+                        <td><i class="fa-solid fa-circle-xmark"></i> Acceso denegado</td>
+                    </tr>
+                    <tr>
+                        <td>Acceso técnico</td>
+                        <td>21:30</td>
+                        <td>[Visitante 7]</td>
+                        <td>Prensa</td>
+                        <td><i class="fa-solid fa-circle-check"></i> Acceso autorizado</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Camerinos</td>
+                        <td>Puerta de artistas</td>
+                        <td>21:40</td>
+                        <td>[Visitante 8]</td>
+                        <td>Artista</td>
+                        <td><i class="fa-solid fa-circle-check"></i> Acceso autorizado</td>
+                    </tr>
+                    <tr>
+                        <td>Puerta de artistas</td>
+                        <td>21:50</td>
+                        <td>[Visitante 9]</td>
+                        <td>Staff</td>
+                        <td><i class="fa-solid fa-clock"></i> Caducado</td>
+                    </tr>
+                    <tr>
+                        <td>Puerta de artistas</td>
+                        <td>22:00</td>
+                        <td>[Visitante 10]</td>
+                        <td>Prensa</td>
+                        <td><i class="fa-solid fa-circle-xmark"></i> Acceso denegado</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-        <section>
 
+        <hr>
+
+        <section>
+            <h2>Solicitud de pase VIP</h2>
+            <p>Formulario para autorizar el acceso a invitados especiales a zonas restringidas.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Autorización de pase VIP</legend>
+
+                    <div>
+                        <label for="codigo-autorizacion">Código de autorización (8 dígitos):</label>
+                        <input type="password" id="codigo-autorizacion" name="codigo_autorizacion" pattern="[0-9]{8}" minlength="8" maxlength="8" required>
+                    </div>
+
+                    <div>
+                        <label for="email-invitado">Correo electrónico del invitado:</label>
+                        <input type="email" id="email-invitado" name="email_invitado" required>
+                    </div>
+
+                    <fieldset>
+                        <legend>Zonas permitidas:</legend>
+                        <input type="checkbox" id="zona-camerinos" name="zonas_permitidas" value="camerinos">
+                        <label for="zona-camerinos">Camerinos</label>
+
+                        <input type="checkbox" id="zona-escenario" name="zonas_permitidas" value="escenario">
+                        <label for="zona-escenario">Escenario</label>
+
+                        <input type="checkbox" id="zona-vip" name="zonas_permitidas" value="zona_vip">
+                        <label for="zona-vip">Zona VIP</label>
+
+                        <input type="checkbox" id="zona-prensa" name="zonas_permitidas" value="prensa">
+                        <label for="zona-prensa">Prensa</label>
+                    </fieldset>
+
+                    <div>
+                        <label for="color-pulsera">Color de la pulsera:</label>
+                        <select id="color-pulsera" name="color_pulsera" required>
+                            <option value="">-- Selecciona un color --</option>
+                            <option value="dorado">Dorado</option>
+                            <option value="plata">Plata</option>
+                            <option value="rojo">Rojo</option>
+                            <option value="azul">Azul</option>
+                            <option value="negro">Negro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button type="submit">Autorizar pase</button>
+                    </div>
+                </fieldset>
+            </form>
         </section>
 
     </main>
